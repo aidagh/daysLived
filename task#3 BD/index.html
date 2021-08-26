@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./scripts.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>BirthDay</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="form-box">
+        <form>
+          <label class="space">Date of birth</label><br />
+          <input type="date" class="date" name="date" id="date" />
+          <input type="button" value="Calculate!" class="calculate" />
+          <div class="message"></div>
+        </form>
+      </div>
+    </div>
+    <!-- <script>
+      const year = new Date().getFullYear();
+      const month = new Date().getMonth() + 1;
+      const day = new Date().getDate();
+      document
+        .querySelector(".calculate")
+        .addEventListener("click", function () {
+          const birthday = document.querySelector(".date").value;
+          const birthYear = Number(birthday.slice(0, 4));
+          const birthMonth = Number(birthday.slice(5, 7));
+          const birthDate = Number(birthday.slice(8, 10));
+          const leapYear = Math.trunc((year - birthYear) / 4);
+          const diff =
+            (year - birthYear) * 31536000000 +
+            (month - birthMonth) * 2628000000 +
+            (day - birthDate) * 86400000;
+          const x = Math.trunc(diff / (24 * 3600 * 1000)) + leapYear;
+          document.querySelector(
+            ".message"
+          ).textContent = `You are ${x} days old! `;
+        });
+    </script> -->
+  </body>
+</html>
